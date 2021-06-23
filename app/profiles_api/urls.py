@@ -1,3 +1,4 @@
+from app.profiles_api.views import UserLoginAPIView
 from django.urls import path
 from django.urls.conf import include 
 
@@ -13,6 +14,7 @@ router.register('profile', views.UserProfileViewSet)
 
 urlpatterns = [ 
     path('hello-view/', views.HelloAPIView.as_view()),
+    path('login/', views.UserLoginAPIView),
     path('', include(router.urls))
 
 ]
